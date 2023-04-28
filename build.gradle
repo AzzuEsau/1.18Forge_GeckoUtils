@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '1.0.0'
+version = '1.0.1'
 group = 'com.azzubanana.gecko_utils' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'gecko_utils'
 
