@@ -50,7 +50,7 @@ public abstract class DefaultTamable extends TamableAnimal implements IAnimatabl
     {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 5000.00f)
-                .add(Attributes.ATTACK_DAMAGE, 4.0f)
+                .add(Attributes.ATTACK_DAMAGE, 6.0f)
                 .add(Attributes.ATTACK_SPEED, .75f)
                 .add(Attributes.MOVEMENT_SPEED, .2).build();
     }

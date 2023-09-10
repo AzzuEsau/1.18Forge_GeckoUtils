@@ -1,6 +1,6 @@
 package com.azzubanana.gecko_utils;
 
-import com.azzubanana.example.client.renderer.WolfTamableRendererExample;
+import com.azzubanana.example.client.entity.renderer.WolfTamableRendererExample;
 import com.azzubanana.example.entity.ModEntityTypes;
 import com.azzubanana.gecko_utils.entity.defaults.DefaultTamable;
 import com.mojang.logging.LogUtils;

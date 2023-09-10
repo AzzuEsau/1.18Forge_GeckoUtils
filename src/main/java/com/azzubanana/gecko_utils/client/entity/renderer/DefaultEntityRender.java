@@ -1,7 +1,6 @@
-package com.azzubanana.gecko_utils.client.renderer;
+package com.azzubanana.gecko_utils.client.entity.renderer;
 
-
-import com.azzubanana.gecko_utils.entity.defaults.DefaultTamable;
+import com.azzubanana.gecko_utils.entity.defaults.DefaultEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
@@ -20,16 +19,16 @@ import software.bernie.geckolib3.geo.render.built.GeoBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.ExtendedGeoEntityRenderer;
 
-public class DefaultTamableRender extends ExtendedGeoEntityRenderer<DefaultTamable> {
+public class DefaultEntityRender extends ExtendedGeoEntityRenderer<DefaultEntity> {
     protected ItemStack mainHandItem, offHandItem, helmetItem, chestplateItem, leggingsItem, bootsItem;
 
-    protected DefaultTamableRender(EntityRendererProvider.Context renderManager, AnimatedGeoModel<DefaultTamable> modelProvider) {
+    protected DefaultEntityRender(EntityRendererProvider.Context renderManager, AnimatedGeoModel<DefaultEntity> modelProvider) {
         super(renderManager, modelProvider);
     }
 
 
     @Override
-    public void renderEarly(DefaultTamable animatable, PoseStack poseStack, float partialTick, MultiBufferSource bufferSource,
+    public void renderEarly(DefaultEntity animatable, PoseStack poseStack, float partialTick, MultiBufferSource bufferSource,
                             VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float partialTicks) {
         super.renderEarly(animatable, poseStack, partialTick, bufferSource, buffer, packedLight, packedOverlay, red, green, blue, partialTicks);
 
@@ -48,13 +47,13 @@ public class DefaultTamableRender extends ExtendedGeoEntityRenderer<DefaultTamab
 
     @Nullable
     @Override
-    protected ResourceLocation getTextureForBone(String boneName, DefaultTamable animatable) {
+    protected ResourceLocation getTextureForBone(String boneName, DefaultEntity animatable) {
         return null;
     }
 
     @Nullable
     @Override
-    protected ItemStack getHeldItemForBone(String boneName, DefaultTamable animatable) {
+    protected ItemStack getHeldItemForBone(String boneName, DefaultEntity animatable) {
         return switch (boneName) {
             case DefaultBipedBoneIdents.LEFT_HAND_BONE_IDENT -> animatable.isLeftHanded() ? mainHandItem : offHandItem;
             case DefaultBipedBoneIdents.RIGHT_HAND_BONE_IDENT -> animatable.isLeftHanded() ? offHandItem : mainHandItem;
@@ -72,12 +71,12 @@ public class DefaultTamableRender extends ExtendedGeoEntityRenderer<DefaultTamab
 
     @Nullable
     @Override
-    protected BlockState getHeldBlockForBone(String boneName, DefaultTamable animatable) {
+    protected BlockState getHeldBlockForBone(String boneName, DefaultEntity animatable) {
         return null;
     }
 
     @Override
-    protected void preRenderItem(PoseStack stack, ItemStack item, String boneName, DefaultTamable animatable, IBone bone) {
+    protected void preRenderItem(PoseStack stack, ItemStack item, String boneName, DefaultEntity animatable, IBone bone) {
         if (item == this.mainHandItem) {
             stack.mulPose(Vector3f.XP.rotationDegrees(-90f));
 
@@ -95,17 +94,17 @@ public class DefaultTamableRender extends ExtendedGeoEntityRenderer<DefaultTamab
     }
 
     @Override
-    protected void preRenderBlock(PoseStack poseStack, BlockState state, String boneName, DefaultTamable animatable) {
+    protected void preRenderBlock(PoseStack poseStack, BlockState state, String boneName, DefaultEntity animatable) {
 
     }
 
     @Override
-    protected void postRenderItem(PoseStack poseStack, ItemStack stack, String boneName, DefaultTamable animatable, IBone bone) {
+    protected void postRenderItem(PoseStack poseStack, ItemStack stack, String boneName, DefaultEntity animatable, IBone bone) {
 
     }
 
     @Override
-    protected void postRenderBlock(PoseStack poseStack, BlockState state, String boneName, DefaultTamable animatable) {
+    protected void postRenderBlock(PoseStack poseStack, BlockState state, String boneName, DefaultEntity animatable) {
 
     }
 }

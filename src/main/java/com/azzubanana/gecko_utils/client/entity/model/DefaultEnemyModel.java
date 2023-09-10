@@ -1,4 +1,4 @@
-package com.azzubanana.gecko_utils.client.model;
+package com.azzubanana.gecko_utils.client.entity.model;
 
 
 import com.azzubanana.gecko_utils.entity.defaults.DefaultEnemy;
