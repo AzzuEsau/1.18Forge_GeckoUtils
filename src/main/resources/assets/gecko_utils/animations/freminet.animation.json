@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true
+		},
+		"sit": {
+			"loop": true,
+			"bones": {
+				"Freminet": {
+					"position": {
+						"vector": [0, -10, 0]
+					}
+				},
+				"legs": {
+					"rotation": {
+						"vector": [-90, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

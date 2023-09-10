@@ -1,4 +1,4 @@
-package com.azzubanana.gecko_utils.client.renderer;
+package com.azzubanana.gecko_utils.client.entity.renderer;
 
 import com.azzubanana.gecko_utils.entity.defaults.DefaultEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
